@@ -21,8 +21,8 @@
  */
 
 import UIKit
-import Alamofire
 import MBProgressHUD
+import Alamofire
 
 public class PickFlavorViewController: UIViewController {
 

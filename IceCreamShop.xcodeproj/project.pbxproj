@@ -19,7 +19,6 @@
 		42B433FB1A89ECFB0091170B /* FlavorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B433FA1A89ECFB0091170B /* FlavorFactory.swift */; };
 		42C970621A8C9CAF002FEFF3 /* UIColor+RGBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C970611A8C9CAF002FEFF3 /* UIColor+RGBA.swift */; };
 		ADBC4D65A6A93C1157408AB8 /* Pods_IceCreamShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7370A7215658153C5FD1DE62 /* Pods_IceCreamShop.framework */; };
-		B74E723D21EF0EFD00361651 /* appcenter-pre-build.sh in Resources */ = {isa = PBXBuildFile; fileRef = B74E723C21EF0EFD00361651 /* appcenter-pre-build.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +39,6 @@
 		42B433FC1A89F78F0091170B /* IceCreamShop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IceCreamShop-Bridging-Header.h"; sourceTree = "<group>"; };
 		42C970611A8C9CAF002FEFF3 /* UIColor+RGBA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+RGBA.swift"; sourceTree = "<group>"; };
 		7370A7215658153C5FD1DE62 /* Pods_IceCreamShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IceCreamShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B74E723C21EF0EFD00361651 /* appcenter-pre-build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "appcenter-pre-build.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +82,6 @@
 		42801B461A881DF600DEB026 = {
 			isa = PBXGroup;
 			children = (
-				B74E723C21EF0EFD00361651 /* appcenter-pre-build.sh */,
 				42801B511A881DF600DEB026 /* IceCreamShop */,
 				42801B501A881DF600DEB026 /* Products */,
 				E1B3556271B9796A750387AC /* Frameworks */,
@@ -258,7 +255,6 @@
 			files = (
 				4274BF191A88268F00937936 /* LaunchScreen.xib in Resources */,
 				42801B5A1A881DF600DEB026 /* Main.storyboard in Resources */,
-				B74E723D21EF0EFD00361651 /* appcenter-pre-build.sh in Resources */,
 				4274BF171A88264600937936 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
