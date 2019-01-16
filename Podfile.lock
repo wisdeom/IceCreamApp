@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.8.1)
+  - MBProgressHUD (1.1.0)
+
+DEPENDENCIES:
+  - Alamofire (= 4.8.1)
+  - MBProgressHUD (~> 1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - MBProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+
+PODFILE CHECKSUM: 30606b9d88a9ea20adfe89a7cd3581beb7500c83
+
+COCOAPODS: 1.5.3

@@ -21,6 +21,8 @@
  */
 
 import UIKit
+import Alamofire
+import MBProgressHUD
 
 public class PickFlavorViewController: UIViewController {
 
@@ -42,7 +44,45 @@ public class PickFlavorViewController: UIViewController {
   }
 
   fileprivate func loadFlavors() {
-    // TO-DO: Implement this
+    //0-a. Show an instance of MBProgressHUD while the GET request downloads
+    showLoadingHUD()
+    
+    //1. Using Alamofire to create a GET request and download a plist containing ice cream flavors
+    Alamofire.request(
+      "https://www.raywenderlich.com/downloads/Flavors.plist",
+      method: .get,
+      encoding: PropertyListEncoding(format: .xml, options:0)).responsePropertyList{
+        [weak self] response in
+        
+        //2. In order to break a strong reference cycle, use a weak reference to self in the response completion block. Once the block executes, immediately get a strong reference to self to set properties on it later.
+        guard let strongSelf = self else {return}
+        
+        //0-b. Hide the HUD when the request is finished.
+        strongSelf.hideLoadingHUD()
+        
+        //3. Verify the response.result indicates it was successful and the response.result.value is an array of dictionaries.
+        guard response.result.isSuccess,
+          let dictionaryArray = response.result.value as?[[String: String]] else{
+            return
+        }
+        
+        //4. Set strongSelf.flavors to an array of Flavor objects created by a FlavorFactory. This class takes an array of dictionaries and uses them to create instance of Flavor.
+        strongSelf.flavors = strongSelf.flavorFactory.flavors(from: dictionaryArray)
+        
+        //5. Reload the collection view and select the first flavor. 
+        strongSelf.collectionView.reloadData()
+        strongSelf.selectFirstFlavor()
+    }
+  }
+  
+  private func showLoadingHUD()
+  {
+    let hud = MBProgressHUD.showAdded(to: contentView, animated: true)
+    hud.label.text = "Loading..."
+  }
+  
+  private func hideLoadingHUD(){
+    MBProgressHUD.hide(for: contentView, animated:true)
   }
 
   fileprivate func selectFirstFlavor() {
